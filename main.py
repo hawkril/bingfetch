@@ -24,11 +24,11 @@ def fetch_wallpaper(pic, data):
 
 
 def fetch_descrition(pic, data):
-	copyright= data['images'][0]['copyright']
+	copyright = data['images'][0]['copyright']
 	split = copyright.partition('(')
 	des_string = pic + ' - ' + split[0] +'\n'
 	des_file = picDir + 'descriptions.txt'
-	with open( des_file, "a") as f:
+	with open(des_file, "a") as f:
 		f.write(des_string)
 		f.close()
 
@@ -42,6 +42,6 @@ def main():
 
 if __name__ == "__main__":
 	argc = len(sys.argv)
-	if argc >1 :
-		idx=sys.argv[1]
+	if argc > 1:
+		idx = sys.argv[1]
 	main()
